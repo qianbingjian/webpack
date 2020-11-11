@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html style="font-size:16px">
+  <head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
+    <!--https http 混合加载-->
+    <meta content=always name=referrer>
+    <!--[if lte IE 9]>
+    <script>
+      window.location.href='/static/html/browser.html';
+    </script>
+    <![endif]-->
+    <script src="plugins/js-spark-md5.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <script>
+      try {
+        document.getElementsByTagName('html')[0].style.fontSize = '16px'
+      } catch (e) {}
+    </script>
+    <div id="app">
+      <style>
+        html,body,#app,.indexBox{
+          height: 100%;
+        }
+        .indexBox {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+        .indexLoading {
+          animation: spinnerFour 1s linear infinite;
+          border: solid 10px transparent;
+          border-top: solid 7px #b4b5b6;
+          border-radius: 100%;
+          width: 100px;
+          height: 100px;
+        }
+        @keyframes spinnerFour {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      </style>
+      <div class="indexBox" style="color:#727475;">
+        <div class="indexLoading"></div>
+        <p style="margin-top: 10px">页面加载中...</p>
+      </div>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
