@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const utils = require('./utils')
 const BUILD_TYPE = process.env.BUILD_TYPE || 'www'
 
@@ -62,19 +61,6 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader'
-      },
-      {
-        test: /.s?css$/,
-        use: ['style-loader', 'css-loader', 
-        {loader:'postcss-loader',options:{postcssOptions: {plugins: [['postcss-preset-env']]}}},
-        'sass-loader',
-        {
-          loader: 'sass-resources-loader',
-          options: {
-            // it need a absolute path
-            resources: [path.resolve(__dirname, '../../src') + '/' + BUILD_TYPE + '/assets/css/_var.scss']
-          }
-        }]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

@@ -4,7 +4,7 @@
     <el-button>
       button
     </el-button>
-    <img src="http://fuchifs.oss.zqlian.com/upload/2020/08/26/e32c4c51deb2798c2074781755873d60.png?Expires=1605085584&OSSAccessKeyId=LTAI" alt="">
+    <img src="http://fuchifs.oss.zqlian.com/upload/2020/08/26/e32c4c51deb2798c2074781755873d60.png?Expires=1605085584&OSSAccessKeyId=LTAI" alt=""  />
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
   name: 'App',
   title:'App',
   desc: 'App',
-  data() {
+  data () {
     return {}
   }
 }

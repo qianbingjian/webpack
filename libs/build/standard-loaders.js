@@ -3,6 +3,7 @@
  * 每个组件需要包含 name, title, desc
  */
 let hasError
+
 function loader (text, map) {
   let scriptData = text.match(/<script>[\s\S]*<\/script>/m)
   if (scriptData && scriptData[0]) {
