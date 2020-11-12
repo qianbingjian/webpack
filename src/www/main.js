@@ -5,12 +5,17 @@ import 'babel-polyfill'
 import Vue from 'vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+
+import Global from '~/libs/global'
 const App = require('./App').default
 const router = require('./router').default
 
 Vue.config.productionTip = false
 Vue.config.devtools = true
 
+Vue.use(Global, {
+
+})
 // element组件默认尺寸 samll
 Vue.use(ElementUI, { size: 'small' })
 

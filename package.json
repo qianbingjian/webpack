@@ -51,8 +51,11 @@
     "webpack-merge": "^5.3.0"
   },
   "dependencies": {
+    "axios": "^0.21.0",
     "babel-polyfill": "^6.26.0",
     "element-ui": "^2.14.0",
+    "js-base64": "^3.6.0",
+    "pako": "^1.0.11",
     "vue": "^2.6.12",
     "vue-router": "^3.4.9"
   }
