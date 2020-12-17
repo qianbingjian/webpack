@@ -25,22 +25,10 @@ export default {
       isLocalhost,
       isDev,
       BASE_LRON_BONES,
-      BASE_WWW_URL: isLocalhost ? 'http://localhost:8010/#' : localOrigin + '/#',
+      API_URL: origin + '/api',
+      BASE_USER_URL: isLocalhost ? 'http://localhost:8010/#' : localOrigin + '/#',
       ...window.CONFIG
     }
-    // 中间件
-    // window.CONFIG.BASE_LRON_BONES = BASE_LRON_BONES || window.CONFIG.API_URL.replace(/api$/, 'lron/v2/bones')
-
-    // 检测是否支持阿里云
-    // if (window.Z.constant.isQa) {
-    //   window.CONFIG.CONNECT_ALI_YUN = 'Y'
-    // } else {
-    //   window.Z.api.file.oss.test().then((data) => {
-    //     window.CONFIG.CONNECT_ALI_YUN = 'Y'
-    //   }).catch(() => {
-    //     window.CONFIG.CONNECT_ALI_YUN = 'N'
-    //   })
-    // }
     return origin
   }
 }

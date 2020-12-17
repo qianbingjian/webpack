@@ -1,0 +1,211 @@
+.pdf-view {
+  width: 240mm;
+}
+
+.pdf-view .pdf-page {
+  width: 210mm;
+}
+
+.pdf-view > .pdf-page-main {
+  width: 210mm;
+}
+
+.pdf-view.page-version-3-0 > .pdf-page-main {
+  width: 210mm;
+  padding: 10mm 15mm;
+}
+.pdf-view.page-version-3-0{
+  width: 210mm;
+  padding: 0;
+}
+
+.pdf-view.print-new {
+  width: 210mm;
+}
+
+.pdf-view.print-new > .pdf-page-main {
+  width: 210mm;
+}
+
+.pdf-view .page-footer {
+  display: block;
+}
+
+.pdf-view.print-new .print-footer {
+  display: none;
+}
+
+.pdf-view .pdf-input > .el-select {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+}
+.pdf-view .pdf-table td.selected {
+  background-color: transparent;
+}
+.pdf-view .pdf-page .pdf-block > .item:hover {
+  background-color: transparent;
+}
+.pdf-view .pdf-page .pdf-block > .item.selected {
+  border: none;
+  background-color: transparent;
+}
+
+.pdf-view > .pdf-page-main {
+  box-shadow: 0 0 4px 0 rgba(100, 100, 100, 0.5);
+  margin-bottom: 10px;
+  width: 240mm;
+  overflow: visible;
+}
+
+.pdf-view .pdf-add {
+  position: absolute;
+  bottom: 2px;
+  z-index: 100;
+  display: block;
+}
+.pdf-view .pdf-add.outer {
+  left: calc(100% + 5px);
+}
+.pdf-view .pdf-add.inner {
+  right: 2px;
+  bottom: 2px;
+  color: red;
+}
+.pdf-view .pdf-add.inner .btn {
+  height: 14px;
+  line-height: 14px;
+}
+
+.pdf-view .pdf-img-text-add .btn {
+  font-size: 12px;
+}
+.pdf-view .pdf-img {
+  position: relative;
+}
+.pdf-view .pdf-img .img-btn{
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  text-align: center;
+}
+
+.pdf-view .only-pdf-show {
+  display: none;
+}
+
+.pdf-view .only-pdf-show.table-cell {
+  display: none;
+}
+
+.textarea-break-page .item > .pdf-textarea > textarea {
+  border: 1px solid #333;
+}
+
+.textarea-break-page .item > .pdf-textarea > .input-text {
+  border: 1px solid #333;
+}
+
+.pdf-view.print-landscape {
+  width: 327mm;
+}
+
+.pdf-view.print-landscape > .pdf-page-main {
+  width: 327mm;
+  height: 250mm;
+}
+
+.pdf-view.print-landscape .pdf-page {
+  width: 297mm;
+  height: 210mm;
+}
+
+.pdf-view.print-new.print-landscape {
+  width: 297mm;
+}
+
+.pdf-view.print-new.print-landscape > .pdf-page-main {
+  width: 297mm;
+  height: 210mm;
+}
+
+.pdf-view.print-new.print-landscape .pdf-page {
+  width: 100%;
+  height: 100%;
+}
+
+.pdf-view .del-btn {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: red;
+  font-size: 16px;
+  padding-right: 5px;
+  z-index: 1;
+}
+
+.pdf-view .pdf-select.in-table {
+  text-align: left;
+}
+
+.pdf-view .pdf-select .none-show-select {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.pdf-view .pdf-select .input-text {
+  display: none;
+}
+
+.pdf-view .pdf-select .el-select {
+  height: 27px;
+}
+
+.pdf-view .el-input--small .el-input__inner {
+  height: 27px;
+}
+
+.pdf-view .show {
+  display: block;
+}
+.pdf-view input {
+  display: block;
+}
+.pdf-view [class*=none-show-] {
+  display: block;
+}
+.pdf-view .pdf-dynamic-input span {
+  visibility: hidden;
+  max-height: 22px;
+  overflow: hidden;
+}
+.pdf-view .hover-show {
+  display: none;
+}
+.pdf-view tr:hover .hover-show {
+  display: block;
+}
+
+.pdf-view .hide {
+  display: none;
+}
+.pdf-view .pdf-table-import {
+  position: absolute;
+  bottom: 5px;
+  text-align: right;
+  padding-right: 5px;
+}
+.pdf-view .pdf-table-import .el-button {
+  padding: 0 4px;
+  border-radius: 2px;
+  line-height: 24px;
+}
+.pdf-view .hide-text {
+  opacity: 1;
+  visibility: visible;
+}

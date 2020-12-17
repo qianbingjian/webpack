@@ -1,0 +1,92 @@
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.fc-button-group {
+  .el-button, .zq-button, .zq-button.zq-button--small, .zq-button.zq-button--primary {
+    height: 32px;
+    min-width: 76px;
+    padding: 0 12px;
+    line-height: 26px;
+    color: $theme-color;
+    border: 1px solid $theme-color;
+    background: white;
+    &:hover {
+      background: white;
+      color: $theme-hover-color;
+      border: 1px solid $theme-hover-color;
+    }
+    &:focus {
+      background: white;
+      color: $theme-hover-color;
+      border: 1px solid $theme-hover-color;
+    }
+    &:first-child {
+      color: white;
+      background: $theme-color;
+      border: 1px solid $theme-color;
+      &:hover {
+        background: $theme-hover-color;
+      }
+      &:focus {
+        background: $theme-hover-color;
+      }
+    }
+  }
+  &.reverse-group {
+    .el-button, .zq-button, .zq-button.zq-button--small, .zq-button.zq-button--primary {
+      &:first-child {
+        color: $theme-color;
+        background: white;
+        border: 1px solid $theme-color;
+        &:hover {
+          background: white;
+        }
+        &:focus {
+          background: white;
+        }
+      }
+      &.hover-white{
+        font-size: 14px;
+        &:hover {
+          color: white;
+          background: $theme-hover-color;
+        }
+        &:focus {
+          background: $theme-hover-color;
+        }
+        z-index: 100;
+      }
+      &:last-child {
+        color: white;
+        background: $theme-color;
+        border: 1px solid $theme-color;
+        &:hover {
+          background: $theme-hover-color;
+        }
+        &:focus {
+          background: $theme-hover-color;
+        }
+      }
+    }
+  }
+  &.big-group {
+    .el-button, .zq-button{
+      height: 32px;
+      min-width: 90px;
+      padding: 0 16px;
+      line-height: 32px;
+    }
+  }
+}
+.el-dropdown-menu {
+  .el-dropdown-menu__item {
+    .el-button--default {
+      width: 100%;
+    }
+  }
+}

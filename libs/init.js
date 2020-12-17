@@ -17,7 +17,7 @@ export default {
     const origin = await initConfig.config()
     // 链接切换的兼容处理
     window.onhashchange = () => {
-      if (window.Z.constant.vue.$router) window.Z.constant.vue.$router.push(window.location.hash.slice(1))
+      if (window.Z && window.Z.constant && window.Z.constant.vue && window.Z.constant.vue.$router) window.Z.constant.vue.$router.push(window.location.hash.slice(1))
     }
     window.Z.global.subscribe.bind('reset-global-init-data', (useOrigin, next) => {
       initMethod.initData(useOrigin || origin).then(next)
@@ -30,5 +30,12 @@ export default {
     return Promise.all([].map(type => {
       return initMethod[type]()
     }))
-  }
+  },
+  then
+}
+
+function then (Vue) {
+  // 组件初始化
+  const components = require('~/libs/components/index').default
+  Vue.use(components)
 }

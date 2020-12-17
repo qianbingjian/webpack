@@ -4,7 +4,6 @@
  * @module service/utils/fetch
  */
 import axios from 'axios'
-const pako = require('pako')
 axios.defaults.withCredentials = true
 let usePost
 
@@ -69,13 +68,9 @@ const fetch = {
     if (data && Z.global.utils) data = Z.global.utils.trim(data)
     method = method.toLowerCase()
     if (!navigator.onLine) {
-      if (process.env.PLATFORM === 'mobile') {
-        Z.global.message.error('网络异常，请确认你的手机处于联网状态！')
-      } else {
-        Z.global.message.error('网络异常，请确认你的电脑处于联网状态！')
-      }
+      Z.global.message.error('网络异常，请确认你的设备处于联网状态！')
       Z.global.subscribe.trigger('loading', 0)
-      return Promise.reject('网络异常，请确认你的电脑处于联网状态！')
+      return Promise.reject('网络异常，请确认你的设备处于联网状态！')
     }
     data = data || {}
     return axios.request({ url, data, method, ...data._config, ...config })
@@ -116,6 +111,21 @@ const fetch = {
       if (config.data) delete config.data._config
 
       config = formatGET(config)
+
+      // 如果没有前缀，加上默认前缀
+      if (!hasRquestPrefix(config.url)) {
+        // 根据参数拼接url
+        if (_config && _config.baseUrl) {
+          config.url = _config.baseUrl + config.url
+        } else if (config.url.indexOf('/api') === 0) {
+          /**
+           * v2 前缀xx.xx.com/api 无fuchi
+           */
+          config.url = (CONFIG.API_URL + config.url.slice(4))
+        } else {
+          config.url = CONFIG.BASE_API_URL + config.url
+        }
+      }
 
       // FormData 才进行进度更新
       if (config.data instanceof FormData) {
@@ -201,6 +211,7 @@ const fetch = {
       }
       if (resStatus === 401) {
         console.log(401)
+        showErrorMessage(errorMessage || '登录失效，请重新登录！', Z)
       } else {
         console.log(99)
       }
@@ -208,17 +219,17 @@ const fetch = {
     })
   }
 }
-// function showErrorMessage (errorMessage, Z) {
-//   if (/^<[\s\S]+>$/.test(errorMessage)) {
-//     return Z.global.message.confirm(errorMessage, '操作提示', {
-//       dangerouslyUseHTMLString: true,
-//       confirmButtonText: '我知道了',
-//       type: 'warning',
-//       showCancelButton: false
-//     })
-//   }
-//   Z.global.message.error(errorMessage)
-// }
+function showErrorMessage (errorMessage, Z) {
+  if (/^<[\s\S]+>$/.test(errorMessage)) {
+    return Z.global.message.confirm(errorMessage, '操作提示', {
+      dangerouslyUseHTMLString: true,
+      confirmButtonText: '我知道了',
+      type: 'warning',
+      showCancelButton: false
+    })
+  }
+  Z.global.message.error(errorMessage)
+}
 fetch.init()
 
 export default fetch.request

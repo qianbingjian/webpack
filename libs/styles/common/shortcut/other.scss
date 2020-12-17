@@ -1,0 +1,49 @@
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-disabled {
+  cursor: not-allowed;
+}
+
+.cursor-move {
+  cursor: move;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-auto-y {
+  overflow-y: auto;
+}
+
+.border-333 {
+  border: 1px solid #333;
+}
+
+.border-b-eee {
+  border-bottom: 1px solid #eee;
+}
+.border-b-d-eee {
+  border-bottom: 1px dashed #eee;
+}
+
+* {
+  margin: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+.box-shadow {
+  box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.12);
+}
+
+.pointer {
+  cursor: pointer;
+}

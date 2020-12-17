@@ -1,0 +1,85 @@
+.color- {
+  &fff {
+    color: #ffffff;
+  }
+  &333 {
+    color: #333;
+  }
+  &666 {
+    color: #666;
+  }
+  &999 {
+    color: #999;
+  }
+  &114 {
+    color: rgba(114, 116, 117, 1);
+  }
+  &white {
+    color: white;
+  }
+  &black {
+    color: black;
+  }
+  &red {
+    color: red;
+  }
+  &yellow {
+    color: yellow;
+  }
+  &blue {
+    color: blue;
+  }
+  &success {
+    color: $success-color;
+  }
+  &theme {
+    color: $theme-color;
+  }
+  &logo {
+    color: rgba(19, 20, 21, 1);
+  }
+  &theme-assist {
+    color: $theme-hover-weak-color;
+  }
+  &pdf-new {
+    color: $theme-color;
+  }
+  &pdf-update {
+    color: $danger-color;
+  }
+}
+
+//兼容老字体
+.theme-color {
+  color: $theme-color;
+}
+
+.theme-assist-color {
+  color: $theme-hover-weak-color;
+}
+
+.grey-01 {
+  color: $bg-first-color;
+}
+
+.danger-c {
+  color: $danger-color;
+}
+
+.color-black {
+  color: black;
+}
+
+.success-c {
+  color: $success-color;
+}
+
+.warring-c {
+  color: $warring-color;
+}
+
+.hover-theme {
+  &:hover {
+    color: $theme-light-color;
+  }
+}

@@ -1,0 +1,62 @@
+.back- {
+  &red {
+    background-color: red;
+  }
+  &orange {
+    background-color: orange;
+  }
+  &theme {
+    background-color: $theme-color;
+  }
+  &f5 {
+    background-color: #f5f5f5;
+  }
+  &white {
+    background-color: white;
+  }
+  &white-5 {
+    background-color: rgba(255, 255, 255, .5);
+  }
+  &black {
+    background-color: black;
+  }
+  &black-5 {
+    background-color: rgba(0, 0, 0, .5);
+  }
+  &transparent {
+    background-color: transparent;
+  }
+  &pdf-new {
+    background-color: $theme-hover-weak-color;
+  }
+  &pdf-update {
+    background-color: $danger-color;
+  }
+  &theme {
+    background-color: $theme-color;
+  }
+  &danger {
+    background-color: $danger-color;
+  }
+  &warring {
+    background-color: $warring-color;
+  }
+  &333 {
+    background: #333;
+  }
+  &999 {
+    background: #999;
+  }
+  &eee {
+    background: #eee;
+  }
+  &eee-5 {
+    background: rgba(238, 238, 238, 0.5);
+  }
+  &action {
+    background: $theme-weak-color;
+  }
+  &theme-weak {
+    background: $theme-weak-color;
+  }
+}

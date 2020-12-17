@@ -1,0 +1,46 @@
+.border- {
+  &e {
+    border: 1px solid #eee;
+  }
+  &b-e {
+    border-bottom: 1px solid #eee;
+  }
+  &t-e {
+    border-top: 1px solid #eee;
+  }
+  &b-e {
+    border-bottom: 1px solid #eee;
+  }
+  &b-e-dashed {
+    border-bottom: 1px dashed #eee;
+  }
+  &view-operate {
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+  }
+}
+
+.border-333 {
+  border: 1px solid #333;
+}
+
+.border-e {
+  border: 1px solid #eee;
+}
+
+.border {
+  &-radius {
+    border-radius: 100%;
+  }
+  &-rad-4 {
+    border-radius: 4px;
+  }
+  &-rad-10 {
+    border-radius: 10px;
+  }
+}
+
+.border-container {
+  border: 1px solid $border-color;
+  border-radius: 4px;
+}

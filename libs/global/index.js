@@ -1,4 +1,5 @@
 import * as auth from './auth'
+import * as message from './message'
 import * as subscribe from './subscribe'
 import * as utils from './utils'
 import init from '~/libs/init'
@@ -14,6 +15,7 @@ export default {
       auth,
       utils,
       subscribe,
+      message,
       ...baseGlobal
     }
     window.Z = {
@@ -37,11 +39,8 @@ export default {
     Vue.prototype.Z = window.Z
     // 系统环境初始化
     init.init(Vue).then(async () => {
-      // 不需要初始化数据
-      // if (!window.Z.constant.disabledInit) {
-      //   common.init(G)
-      // }
-      // window.Z.global.base.setPlatformTitle()
+      // 全局组件注册
+      init.then(Vue)
       window.Z.global.subscribe.ready('window-g-ready')
     })
   }

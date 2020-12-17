@@ -1,1 +1,52 @@
+@import './color/_color.scss';
 $theme-color: #F30214; //409EFF
+$theme-light-color: #C81623; // 深色 2D8CF0
+$theme-weak-color: #FFCCD2; // 浅色 ecf5ff
+// hover色
+$theme-hover-color: #FF2C1D; // 深色 76B4FF
+$theme-hover-weak-color: #FF8E8B; // 浅色 BFDEFF
+// 暂不换肤
+// 状态色
+$success-color: #0c9363;
+$success-hover-color: #00bb66;
+$warring-color: #ff9900;
+$warring-hover-color: #e68a00;
+$danger-color: #ff3300;
+$danger-hover-color: #e4393c;
+//$new-color: #409fff; // 更新色
+
+//
+$tpl-main-back: #F1F0F5;
+
+// 待确定移除
+
+// 背景色
+$bg-weak-color: #FFFFFF;
+$bg-first-color: #C5C8CA;
+$bg-second-color: #DFE1E2;
+$bg-three-color: #f1f2f3;
+
+// border
+$border-color: #eee;
+$border-color-black: #0d1c28;
+
+$container-content-width: 1168px;
+
+$theme-font-family: tahoma, arial, Microsoft YaHei, Hiragino Sans GB, "\u5b8b\u4f53", sans-serif !important;
+
+
+// 字体
+$font-light-color: #0D1C28;
+$font-color: #454848;
+$font-weak-color: #727475;
+$font-reverse-color: #ffffff;
+
+//链接
+$link-color: #F30214;
+$link-color-green: #068D3C;
+$link-hover-color: #C81623;
+$link-visit-color: #5635A0;
+
+//强调
+$emphasize-color: #F13939;
+$emphasize-reverse-color: #152E48;

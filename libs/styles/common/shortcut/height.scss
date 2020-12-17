@@ -1,0 +1,17 @@
+.height- {
+  &100 {
+    height: 100%;
+  }
+  &calc-50 {
+    height: calc(100% - 50px);
+  }
+  &calc-80 {
+    height: calc(100% - 80px);
+  }
+}
+
+.line-h- {
+  &-input {
+    line-height: 32px;
+  }
+}

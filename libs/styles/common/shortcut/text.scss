@@ -1,0 +1,67 @@
+.pre-wrap {
+  white-space: pre-wrap;
+}
+
+.white-nowrap {
+  white-space: nowrap;
+}
+
+.break-all {
+  word-break: break-all;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+  > input {
+    text-align: right;
+  }
+}
+
+.text-middle {
+  vertical-align: middle;
+}
+
+.ellipsis-line-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /*! autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  /*! autoprefixer: off */
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text-underline {
+  text-decoration: underline
+}
+.text-border {
+  width: 100%;
+  height: 1px;
+  background: #eee;
+}
+
+.el-popover__reference {
+  position: relative;
+  z-index: 1;
+}

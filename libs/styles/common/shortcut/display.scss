@@ -1,0 +1,37 @@
+.display {
+  &-table {
+    display: table;
+    > div {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.visible-able {
+  visibility: visible;
+}
+
+.visible-hidden {
+  visibility: hidden;
+}
+
+.scrollbar-none {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.hover-content {
+  .hover-item {
+    display: none;
+  }
+  &:hover {
+    .hover-item {
+      display: block;
+    }
+  }
+}

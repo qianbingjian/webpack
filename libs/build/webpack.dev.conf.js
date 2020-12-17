@@ -2,21 +2,20 @@ const { merge } = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const path = require('path')
-const BUILD_TYPE = process.env.BUILD_TYPE || 'www'
 
 const POST = process.env.PORT || '8000'
+const BUILD_TYPE = process.env.BUILD_TYPE || 'www'
 
 module.exports = merge(baseWebpackConfig, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
     stats: 'errors-only',
-    clientLogLevel: 'warning',
+    clientLogLevel: 'silent',
     historyApiFallback: true,
     disableHostCheck: true,
     publicPath: '/',
     hot: true,
-    hotOnly: true,
     compress: true,
     host: '0.0.0.0',
     port: POST,
@@ -25,7 +24,7 @@ module.exports = merge(baseWebpackConfig, {
       warnings: true,
       errors: true
     },
-    quiet: true // necessary for FriendlyErrorsPlugin
+    quiet: true
   },
   module: {
     rules: [
@@ -37,7 +36,6 @@ module.exports = merge(baseWebpackConfig, {
           {
             loader: 'sass-resources-loader',
             options: {
-            // it need a absolute path
               resources: [path.resolve(__dirname, '../../src') + '/' + BUILD_TYPE + '/assets/css/_var.scss']
             }
           }

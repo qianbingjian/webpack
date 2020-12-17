@@ -1,0 +1,311 @@
+.layout-top-bar {
+  height: 60px;
+  text-align: right;
+  background: $theme-color;
+  color: #ffffff;
+  font-size: 14px;
+  .select-content {
+    min-width: 80px;
+    .select-item {
+      padding-left: 14px;
+      padding-right: 14px;
+      text-align: center;
+      line-height: 14px;
+      font-size: 14px;
+      display: inline-block;
+      border-right: 1px solid rgba(255, 255, 255, 0.38);
+      &:hover {
+        cursor: pointer;
+      }
+      &:last-child {
+        border-right: 0;
+      }
+      .sub {
+        font-size: 12px;
+        color: #aaa;
+      }
+      i.el {
+        font-size: 14px;
+      }
+    }
+    .relation-title {
+
+    }
+    .el-dropdown-link {
+      font-size: 16px;
+      .el-icon-arrow-down {
+        font-size: 16px;
+      }
+    }
+  }
+  .logo {
+    line-height: 60px;
+    padding: 5px 0;
+    img {
+      height: 40px;
+      position: relative;
+    }
+  }
+  .el-dropdown {
+    color: #ffffff;
+  }
+  .main-input {
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 1px solid transparent;
+    margin-right: 24px;
+    color: #fff;
+    height: 32px;
+    position: relative;
+    input {
+      background: transparent;
+      box-shadow: none;
+      border: none;
+      height: 32px;
+      color: white;
+    }
+  }
+  .main-icon-box {
+    .el {
+      font-size: 22px;
+    }
+    .ivu-icon-ios-bell-outline {
+      position: relative;
+      top: 2px;
+    }
+  }
+  .main-icon-line {
+    height: 25px;
+    margin-right: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .el-tabs {
+    margin-top: 7px;
+    .el-tabs__nav-wrap {
+      line-height: 45px;
+      font-size: 16px;
+      &::after {
+        height: 1px;
+        display: none;
+        background-color: #d0cecf;
+      }
+    }
+    .el-tabs__item {
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+
+  .title {
+    width: 150px;
+    font-size: 18px;
+    text-align: left;
+    margin-left: 5px;
+    font-weight: bold;
+  }
+
+  .region-container {
+    .el-dropdown-link {
+      cursor: pointer;
+      font-size: 14px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+  .top-select {
+    width: 100px;
+  }
+  .top-menu {
+    margin-left: 30px;
+    .el-tabs__item {
+      color: rgba(255, 255, 255, .8);
+      &:hover {
+        color: #fff;
+      }
+      &.is-active {
+        color: #fff;
+      }
+    }
+    .el-tabs__active-bar {
+      background-color: white;
+    }
+  }
+  .relation-icon {
+    color: #dddddd;
+    font-size: 24px;
+  }
+  .has-top-line {
+    border-top: 1px solid #eeeeee;
+  }
+  .relation-p {
+    color: #80848f;
+  }
+  .has-bottom-line {
+    border-bottom: 1px solid #eeeeee;
+  }
+  .go-fw {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+.collapsed-el-aside.el-menu {
+  color: #333;
+  background: transparent;
+  border-right: none;
+  .el-menu {
+    background: transparent;
+  }
+  i.el {
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 24px;
+    font-size: 16px;
+  }
+  .menu-count {
+    padding: 0 2px;
+    min-width: 16px;
+    height: 16px;
+    margin-top: -2px;
+    border-radius: 16px;
+    background: $danger-color;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    display: inline-block;
+    color: white;
+  }
+  .el-menu-item {
+    height: 38px;
+    line-height: 38px;
+    padding: 0 32px;
+    // min-width: 200px;
+    font-size: 13px;
+    border-left: 2px solid white;
+    &.is-active {
+      border-left: 2px solid $theme-color;
+    }
+    &.user-menu-item {
+      padding: 0 20px;
+      height: 175px;
+      border-left: 0;
+      &.is-active {
+        background: transparent;
+        border-left: 0;
+      }
+      &:hover {
+        background: transparent;
+      }
+      &:focus {
+        background: transparent;
+      }
+      .user-menu {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eeeeee;
+        p {
+          line-height: 20px;
+          color: #131415;
+          .label {
+            color: #828284;
+            width: 50px;
+            text-align: left;
+          }
+          .user-data {
+            width: 110px;
+            text-align: right;
+          }
+        }
+      }
+      .userName {
+        color: #333333;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .userType {
+        margin-left: 5px;
+        font-size:12px;
+        color: $theme-color;
+        padding: 0 5px;
+        border-radius:8px;
+        border:1px solid $theme-color;
+        max-width: 108px;
+      }
+    }
+  }
+  .el-submenu__title {
+    height: 42px;
+    line-height: 42px;
+    font-size: 13px;
+    .el-submenu__icon-arrow {
+      margin-top: -5px;
+    }
+  }
+}
+
+.setting-popover.el-popover {
+  padding: 10px 0;
+  li {
+    width: 180px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: left;
+    &:hover {
+      background-color: #f3f3f3;
+    }
+  }
+  .is-link {
+    cursor: pointer;
+    &:hover {
+      color: $theme-color;
+    }
+  }
+  .has-top-line {
+    border-top: 1px solid #eeeeee;
+  }
+}
+
+.fc-bread {
+  padding-left: 20px;
+  .title {
+    font-size: 16px;
+    color: $theme-color;
+    display: inline-block;
+  }
+  .desc {
+    font-size: 14px;
+    color: $grey-700;
+  }
+}
+
+.side-action-menu {
+  .el-tree {
+    height: 531px;
+    overflow: auto;
+  }
+  // border-right: 1px solid #f3f3f3;
+
+}
+
+.top-popover {
+  .el-tabs__item.is-active {
+    border-bottom: 2px solid #409EFF;
+  }
+}
+
+.top-popover1 {
+  .el-tabs__active-bar.is-top {
+    border-bottom: 2px solid #409EFF;
+    width: 56px;
+  }
+}
+.el-cascader-menu__item--extensible:after {
+  content: "\e6e0" !important;
+}
